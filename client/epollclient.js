@@ -1,4 +1,4 @@
-Questions = new Mongo.Collection("questions");
+Questions = new Meteor.Collection("questions");
 
 Meteor.subscribe("userData");
 

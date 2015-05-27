@@ -1,5 +1,5 @@
 <head>
-  <title>Epoll : Share your opinion online, anywhere, anytime</title>
+  <title>Elektroniczna ankieta</title>
 </head>
 
 <body>
@@ -7,7 +7,7 @@
   <div class="navbar navbar-static-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="/">Epoll</a>
+        <a class="brand" href="/">Elektroniczna Ankieta</a>
         <ul class="nav pull-right">
     	  <li>
  	    {{> loginButtons}}
@@ -36,7 +36,7 @@
     <div class="row">
       <div class="span6">
         <div class="well">
-          <h4>Sign in using Twitter to submit new questions of vote on existing questions.</h4>
+          <h4>Zaloguj się przez konto na Twitterze aby zadawać pytania i na nie odpowiadać </h4>
           <!-- {{> loginButtons}} -->
         </div>
       </div>
@@ -46,13 +46,13 @@
 
 <!-- Add Question -->
 <template name="addquestion">
-  <textarea rows="3" class="input-xxlarge" name="questionText" id="questionText" placeholder="Add your question"></textarea>
+  <textarea rows="3" class="input-xxlarge" name="questionText" id="questionText" placeholder="Wpisz swoje pytanie ..."></textarea>
   <input type="button" class="button-info add-question" value="Add Question"/>
 </template>
 
 <!-- List all questions -->
 <template name="questions">
-  <h2>All Questions</h2>
+  <h2>Zadane pytania: </h2>
   {{#each items}}
     {{> question}}
   {{/each}}
@@ -63,10 +63,10 @@
   <div>
     <p class="lead">
       {{questionText}}
-      <a class="btn btm-small btn-success yes {{#unless currentUser}}disabled{{/unless}}" href="#"><i class="icon-thumbs-up"></i> Yes {{yes}}</a>
+      <a class="btn btm-small btn-success yes {{#unless currentUser}}disabled{{/unless}}" href="#"><i class="icon-thumbs-up"></i> Tak! {{yes}}</a>
 
 
-      <a class="btn btm-small btn-danger no {{#unless currentUser}}disabled{{/unless}}" href="#"><i class="icon-thumbs-up"></i> No {{no}}</a>
+      <a class="btn btm-small btn-danger no {{#unless currentUser}}disabled{{/unless}}" href="#"><i class="icon-thumbs-up"></i> Nie! {{no}}</a>
 
     </p>
   </div>

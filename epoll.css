@@ -1,11 +1,11 @@
 /* CSS declarations go here */
 
 .login-display-name {
-  color: white;
+  color: black;
 }
 
 .login-button {
-  background-color: white;
+  background-color: grey;
 }
 
 #main {
